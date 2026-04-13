@@ -28,7 +28,7 @@ class Television:
         """
         toggles mute
         """
-        if self.power:
+        if self.__status:
             if self.__muted:
                 self.__muted = False
             else:
@@ -38,7 +38,7 @@ class Television:
         """
         changes channel to next one
         """
-        if self.power:
+        if self.__status:
             if self.__channel == Television.MAX_CHANNEL:
                 self.__channel = Television.MIN_CHANNEL
             else:
@@ -48,7 +48,7 @@ class Television:
         """
         changes channel to previous one
         """
-        if self.power:
+        if self.__status:
             if self.__channel == Television.MIN_CHANNEL:
                 self.__channel = Television.MAX_CHANNEL
             else:
@@ -61,7 +61,7 @@ class Television:
         """
         increases volume by 1
         """
-        if self.power:
+        if self.__status:
             if self.__muted:
                 self.__muted = False
             if self.__volume == Television.MAX_VOLUME:
@@ -74,7 +74,7 @@ class Television:
         """
         decreases volume by 1
         """
-        if self.power:
+        if self.__status:
             if self.__muted:
                 self.__muted = False
             if self.__volume == Television.MIN_VOLUME:
