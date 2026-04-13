@@ -24,7 +24,7 @@ class Test:
         del self.tv7
 
 
-
+# it did not say in lecture or notes to compare full string
 
 
     def test_init(self):
